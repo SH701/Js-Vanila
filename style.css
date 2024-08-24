@@ -1,0 +1,255 @@
+body{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.hidden {
+  display: none;
+}
+.completed {
+  text-decoration: line-through;
+}
+.background-image {
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+#clock{
+  margin:0px;
+  position: fixed;
+  right: 20px;
+  top: 0px;
+  color:rgb(73, 108, 91)
+}
+#login-form{
+ position: relative;
+}
+#login-form input{
+ height: 60px;
+}
+#login-form input:first-child{
+ position: absolute;
+ left: 33%;
+ top: 50px;
+ background-color: transparent;
+ text-align: center;
+ font-size: 29px;
+}
+#login-form input::placeholder{
+  color: black;
+}
+#login-form input[type="submit"] {
+  color: black;
+  font-size: 22px;
+  padding: 15px;
+}
+#login-form input:last-child{
+  position: absolute;
+  left: 60%;
+  top: 50px;
+  background-color: transparent;
+}
+#quote{
+  font-weight: bold;
+  color:rgb(35, 68, 52)
+}
+#quote span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+#quote span:first-child{
+  bottom:12.5%;
+  font-size: 24px;
+}
+#quote span:last-child {
+  bottom: 8%; 
+  font-size: 20px;
+}
+#greeting{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-top: 120px;
+  padding-bottom: 20px;
+  font-size: 60px;
+  font-weight: bold;
+  color:rgb(73, 108, 91)
+}
+#todo-form{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-top: 15px;
+}
+#todo-form input {
+  background-color: transparent;
+  border: none; 
+  border-bottom: 2px solid rgb(86, 84, 84);;   
+  outline: none; 
+  padding: 5px 0; 
+  width: 40%;
+  box-sizing: border-box; 
+  text-align: center;
+  font-size: 24px; 
+  font-weight: bold;
+}
+#todo-form input::placeholder {
+  color: rgb(86, 84, 84); 
+  opacity: 1; /* 불투명도 설정 (0에서 1 사이) */
+}
+ul {
+  list-style-type: none; 
+}
+li::before {
+  content: "→"; 
+  color: rgb(0, 0, 0); 
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 7px;
+}
+#todo-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-top: 10px;
+  font-size: 16px;
+}
+#weather span:first-child{
+  position: absolute;
+  top:10px;
+  font-size: 17.5px;
+}
+#weather span:last-child{
+  position: absolute;
+  top:15px;
+  left:60px;
+  font-size: 17.5px;
+}
+#mode{
+  position: absolute;
+  top: 0px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  display: flex;
+}
+#mode button{
+  color:rgb(73, 108, 91);
+  width: 65px;
+  height: 25px;
+  padding:2px;
+  margin: 0px;
+  border:1px solid rgb(73, 108, 91);
+  cursor: pointer; 
+  background-color: rgb(212, 224, 156);
+  font-size: 17px;
+}
+#mode button:hover {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+#mode button:first-child:active {
+  background-color: black;
+  color: white;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+#mode button:first-child{
+  border-right: 0px solid rgb(73, 108, 91);
+  /* border-top-left-radius: 15px; */
+  border-bottom-left-radius: 15px;
+}
+#mode button:last-child{
+  /* border-top-right-radius: 15px; */
+  border-bottom-right-radius: 15px;
+}
+#mode button:last-child:active{
+  background-color: rgb(203, 228, 245);
+  color: rgb(73, 108, 91);
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+body.dark-mode li span {
+  color: white;
+}
+body.dark-mode li::before {
+  color: white; 
+}
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body.light-mode li span {
+  color: black;
+}
+#calendar {
+  width: 250px;
+  border: 3px solid rgb(73, 108, 91);
+  border-radius: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: absolute;
+  right:20px;
+  bottom:20px;
+}
+
+#calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#calendar-header button{
+  background-color: transparent;
+  border:0px;
+  font-size: 18px;
+  cursor:pointer;
+}
+#calendar-header button:hover {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#month-year {
+  font-weight: bold;
+  font-size: 18px;
+  color:black
+}
+
+#calendar-table {
+  border-collapse: collapse;
+}
+
+#calendar-table th, #calendar-table td {
+  width: 10%;
+  text-align: center;
+  padding: 2.5px;
+}
+
+#calendar-table td {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#calendar-table td:hover {
+  background-color: rgb(168, 167, 167);
+  border-radius: 30px;
+}
+
+#calendar-table .today {
+  background-color: rgb(53, 231, 240,0.6);
+  border-radius: 30px;
+}
+#calendar-body{
+  font-size:16px;
+  font-weight: bold;
+}
